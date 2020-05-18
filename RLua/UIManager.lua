@@ -227,7 +227,7 @@ function UILib.createTab(self, Name)
   UIListLayout.Padding = UDim.new(0, -5)
 end
 
-function UILib.createCheat(Name, Parent, CheatParent)
+function UILib.createCheat(self, Name, Parent, CheatParent)
 	local AimAssist = Instance.new("Frame")
 	local Input = Instance.new("ImageButton")
 	local Display = Instance.new("TextLabel")
@@ -295,7 +295,7 @@ function UILib.createCheat(Name, Parent, CheatParent)
 	return AimAssist,Cheat
 end
 
-function UILib.createButton(Name, Parent)
+function UILib.createButton(self, Name, Parent)
 	local AimAssist = Instance.new("Frame")
 	local Input = Instance.new("ImageButton")
 	local Display = Instance.new("TextLabel")
@@ -335,7 +335,7 @@ function UILib.createButton(Name, Parent)
 	Display.TextXAlignment = Enum.TextXAlignment.Left
 end
 
-function UILib.createSlider(Name, Parent, Min, Max, Default)
+function UILib.createSlider(self, Name, Parent, Min, Max, Default)
 	local Speed = Instance.new("Frame")
 	local Display = Instance.new("TextLabel")
 	local Frame = Instance.new("Frame")
@@ -344,7 +344,7 @@ function UILib.createSlider(Name, Parent, Min, Max, Default)
 	local Number = Instance.new("TextLabel")
 	
 	Speed.Name = Name
-	Speed.Parent = game.StarterGui.Chat.Main.Main.Selection.RightMenu.AimAssist
+	Speed.Parent = Parent
 	Speed.AnchorPoint = Vector2.new(0.5, 0.5)
 	Speed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Speed.BackgroundTransparency = 1.000
