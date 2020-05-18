@@ -18,3 +18,11 @@ Creates a cool tab button for the window you have created.
 
 returns Tab Button
 
+```
+Window:CreateCheat(<string> : Name, <Instance> : Parent, <Instance> : CheatParent)
+```
+Creates the cheat button that automatically changes tabs when you click!! hooray!!
+
+returns Cheat Button, Cheat Frame
+
+
