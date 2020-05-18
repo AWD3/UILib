@@ -4,12 +4,16 @@ Use safely :D
 
 # Documentation
 
-```UILib:CreateWindow()```
+```
+UILib:CreateWindow()
+```
 Creates the window(self explanatory)
 
 returns {GUI, Dropshadow, Cheats, Tabs}
 
-```Window:CreateTab(<string Name>)```
+```
+Window:CreateTab(<string> : Name)
+```
 Creates a cool tab button for the window you have created.
 
 returns Tab Button
