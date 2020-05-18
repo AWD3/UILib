@@ -7,179 +7,182 @@ local LocalPlayer = Players.LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 
 function UILib:CreateWindow()
-  local Chat = Instance.new("ScreenGui")
-  local Main = Instance.new("Frame")
-  local Top = Instance.new("ImageLabel")
-  local Main_2 = Instance.new("ImageLabel")
-  local Tabs = Instance.new("ImageLabel")
-  local TabsScroll = Instance.new("ScrollingFrame")
-  local UIListLayout = Instance.new("UIListLayout")
-  local Selection = Instance.new("ImageLabel")
-  local Cheats = Instance.new("ImageLabel")
-  local RightMenu = Instance.new("ImageLabel")
-  local LeftTop = Instance.new("ImageLabel")
-  local TextLabel = Instance.new("TextLabel")
-  local RightTop = Instance.new("ImageLabel")
-  local TextLabel_2 = Instance.new("TextLabel")
-  local Drop = Instance.new("Frame")
-  local Credits = Instance.new("ImageButton")
+	  local Chat = Instance.new("ScreenGui")
+	  local Main = Instance.new("Frame")
+	  local Top = Instance.new("ImageLabel")
+	  local Main_2 = Instance.new("ImageLabel")
+	  local Tabs = Instance.new("ImageLabel")
+	  local TabsScroll = Instance.new("ScrollingFrame")
+	  local UIListLayout = Instance.new("UIListLayout")
+	  local Selection = Instance.new("ImageLabel")
+	  local Cheats = Instance.new("ImageLabel")
+	  local RightMenu = Instance.new("ImageLabel")
+	  local LeftTop = Instance.new("ImageLabel")
+	  local TextLabel = Instance.new("TextLabel")
+	  local RightTop = Instance.new("ImageLabel")
+	  local TextLabel_2 = Instance.new("TextLabel")
+	  local Drop = Instance.new("Frame")
+	  local Credits = Instance.new("ImageButton")
 
-  Chat.Name = "Chat"
-  Chat.Parent = game:GetService("CoreGui")
-  Chat.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-  Chat.DisplayOrder = 999
+	  Chat.Name = "Chat"
+	  Chat.Parent = game:GetService("CoreGui")
+	  Chat.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	  Chat.DisplayOrder = 999
 
-  Main.Name = "Main"
-  Main.Parent = Chat
-  Main.AnchorPoint = Vector2.new(0.5, 0.5)
-  Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-  Main.BackgroundTransparency = 1.000
-  Main.Position = UDim2.new(0.5, 0, 0.5, 0)
-  Main.Size = UDim2.new(0.436734706, 0, 0.431818157, 0)
-  Main.ZIndex = 5
+	  Main.Name = "Main"
+	  Main.Parent = Chat
+	  Main.AnchorPoint = Vector2.new(0.5, 0.5)
+	  Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	  Main.BackgroundTransparency = 1.000
+	  Main.Position = UDim2.new(0.5, 0, 0.5, 0)
+	  Main.Size = UDim2.new(0.436734706, 0, 0.431818157, 0)
+	  Main.ZIndex = 5
 
-  Top.Name = "Top"
-  Top.Parent = Main
-  Top.AnchorPoint = Vector2.new(0.5, 0.5)
-  Top.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-  Top.BackgroundTransparency = 1.000
-  Top.Position = UDim2.new(0.5, 0, 0.0579999983, 0)
-  Top.Size = UDim2.new(1, 0, 0.0970000029, 0)
-  Top.Image = "rbxassetid://5032463163"
-  Top.SliceCenter = Rect.new(5, 5, 759, 455)
+	  Top.Name = "Top"
+	  Top.Parent = Main
+	  Top.AnchorPoint = Vector2.new(0.5, 0.5)
+	  Top.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	  Top.BackgroundTransparency = 1.000
+	  Top.Position = UDim2.new(0.5, 0, 0.0579999983, 0)
+	  Top.Size = UDim2.new(1, 0, 0.0970000029, 0)
+	  Top.Image = "rbxassetid://5032463163"
+	  Top.SliceCenter = Rect.new(5, 5, 759, 455)
 
-  Main_2.Name = "Main"
-  Main_2.Parent = Main
-  Main_2.AnchorPoint = Vector2.new(0.5, 0.5)
-  Main_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-  Main_2.BackgroundTransparency = 1.000
-  Main_2.Position = UDim2.new(0.5, 0, 0.515789509, 0)
-  Main_2.Size = UDim2.new(1, 0, 0.981578946, 0)
-  Main_2.Image = "rbxgameasset://Images/ui_0000s_0000s_0006_Retângulo-Arredondado-2"
-  Main_2.ScaleType = Enum.ScaleType.Slice
-  Main_2.SliceCenter = Rect.new(739, 462, 739, 462)
+	  Main_2.Name = "Main"
+	  Main_2.Parent = Main
+	  Main_2.AnchorPoint = Vector2.new(0.5, 0.5)
+	  Main_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	  Main_2.BackgroundTransparency = 1.000
+	  Main_2.Position = UDim2.new(0.5, 0, 0.515789509, 0)
+	  Main_2.Size = UDim2.new(1, 0, 0.981578946, 0)
+	  Main_2.Image = "rbxgameasset://Images/ui_0000s_0000s_0006_Retângulo-Arredondado-2"
+	  Main_2.ScaleType = Enum.ScaleType.Slice
+	  Main_2.SliceCenter = Rect.new(739, 462, 739, 462)
 
-  Tabs.Name = "Tabs"
-  Tabs.Parent = Main_2
-  Tabs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-  Tabs.BackgroundTransparency = 1.000
-  Tabs.Position = UDim2.new(0.0334789716, 0, 0.0669437125, 0)
-  Tabs.Size = UDim2.new(0.269341707, 0, 0.859525144, 0)
-  Tabs.Image = "rbxgameasset://Images/ui_0000s_0000s_0005_Retângulo-Arredondado-3"
-  Tabs.ScaleType = Enum.ScaleType.Slice
-  Tabs.SliceCenter = Rect.new(212, 400, 212, 400)
+	  Tabs.Name = "Tabs"
+	  Tabs.Parent = Main_2
+	  Tabs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	  Tabs.BackgroundTransparency = 1.000
+	  Tabs.Position = UDim2.new(0.0334789716, 0, 0.0669437125, 0)
+	  Tabs.Size = UDim2.new(0.269341707, 0, 0.859525144, 0)
+	  Tabs.Image = "rbxgameasset://Images/ui_0000s_0000s_0005_Retângulo-Arredondado-3"
+	  Tabs.ScaleType = Enum.ScaleType.Slice
+	  Tabs.SliceCenter = Rect.new(212, 400, 212, 400)
 
-  TabsScroll.Name = "TabsScroll"
-  TabsScroll.Parent = Tabs
-  TabsScroll.Active = true
-  TabsScroll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-  TabsScroll.BackgroundTransparency = 1.000
-  TabsScroll.BorderColor3 = Color3.fromRGB(255, 255, 255)
-  TabsScroll.BorderSizePixel = 0
-  TabsScroll.Position = UDim2.new(0.0693030208, 0, 0.040000014, 0)
-  TabsScroll.Size = UDim2.new(0.861393988, 0, 0.919448197, 0)
-  TabsScroll.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
-  TabsScroll.CanvasSize = UDim2.new(0, 0, 1, 0)
-  TabsScroll.ScrollBarThickness = 0
-  TabsScroll.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+	  TabsScroll.Name = "TabsScroll"
+	  TabsScroll.Parent = Tabs
+	  TabsScroll.Active = true
+	  TabsScroll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	  TabsScroll.BackgroundTransparency = 1.000
+	  TabsScroll.BorderColor3 = Color3.fromRGB(255, 255, 255)
+	  TabsScroll.BorderSizePixel = 0
+	  TabsScroll.Position = UDim2.new(0.0693030208, 0, 0.040000014, 0)
+	  TabsScroll.Size = UDim2.new(0.861393988, 0, 0.919448197, 0)
+	  TabsScroll.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+	  TabsScroll.CanvasSize = UDim2.new(0, 0, 1, 0)
+	  TabsScroll.ScrollBarThickness = 0
+	  TabsScroll.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
 
-  UIListLayout.Parent = TabsScroll
-  UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-  UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-  UIListLayout.Padding = UDim.new(0, 5)
+	  UIListLayout.Parent = TabsScroll
+	  UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	  UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	  UIListLayout.Padding = UDim.new(0, 5)
 
-  Selection.Name = "Selection"
-  Selection.Parent = Main_2
-  Selection.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-  Selection.BackgroundTransparency = 1.000
-  Selection.Position = UDim2.new(0.3336806, 0, 0.0669437125, 0)
-  Selection.Size = UDim2.new(0.627274334, 0, 0.859525144, 0)
-  Selection.Image = "rbxgameasset://Images/ui_0000s_0000s_0005_Retângulo-Arredondado-3"
-  Selection.ScaleType = Enum.ScaleType.Slice
-  Selection.SliceCenter = Rect.new(212, 400, 212, 400)
+	  Selection.Name = "Selection"
+	  Selection.Parent = Main_2
+	  Selection.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	  Selection.BackgroundTransparency = 1.000
+	  Selection.Position = UDim2.new(0.3336806, 0, 0.0669437125, 0)
+	  Selection.Size = UDim2.new(0.627274334, 0, 0.859525144, 0)
+	  Selection.Image = "rbxgameasset://Images/ui_0000s_0000s_0005_Retângulo-Arredondado-3"
+	  Selection.ScaleType = Enum.ScaleType.Slice
+	  Selection.SliceCenter = Rect.new(212, 400, 212, 400)
 
-  Cheats.Name = "Cheats"
-  Cheats.Parent = Selection
-  Cheats.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-  Cheats.BackgroundTransparency = 1.000
-  Cheats.Position = UDim2.new(0.0466742516, 0, 0.156038105, 0)
-  Cheats.Size = UDim2.new(0.426822633, 0, 0.764568031, 0)
-  Cheats.Image = "rbxgameasset://Images/ui_0000s_0000s_0002_Retângulo-2"
-  Cheats.SliceCenter = Rect.new(5, 5, 759, 455)
+	  Cheats.Name = "Cheats"
+	  Cheats.Parent = Selection
+	  Cheats.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	  Cheats.BackgroundTransparency = 1.000
+	  Cheats.Position = UDim2.new(0.0466742516, 0, 0.156038105, 0)
+	  Cheats.Size = UDim2.new(0.426822633, 0, 0.764568031, 0)
+	  Cheats.Image = "rbxgameasset://Images/ui_0000s_0000s_0002_Retângulo-2"
+	  Cheats.SliceCenter = Rect.new(5, 5, 759, 455)
 
-  RightMenu.Name = "RightMenu"
-  RightMenu.Parent = Selection
-  RightMenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-  RightMenu.BackgroundTransparency = 1.000
-  RightMenu.Position = UDim2.new(0.525255144, 0, 0.156038105, 0)
-  RightMenu.Size = UDim2.new(0.426822633, 0, 0.764568031, 0)
-  RightMenu.Image = "rbxgameasset://Images/ui_0000s_0000s_0002_Retângulo-2"
-  RightMenu.SliceCenter = Rect.new(5, 5, 759, 455)
+	  RightMenu.Name = "RightMenu"
+	  RightMenu.Parent = Selection
+	  RightMenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	  RightMenu.BackgroundTransparency = 1.000
+	  RightMenu.Position = UDim2.new(0.525255144, 0, 0.156038105, 0)
+	  RightMenu.Size = UDim2.new(0.426822633, 0, 0.764568031, 0)
+	  RightMenu.Image = "rbxgameasset://Images/ui_0000s_0000s_0002_Retângulo-2"
+	  RightMenu.SliceCenter = Rect.new(5, 5, 759, 455)
 
-  LeftTop.Name = "LeftTop"
-  LeftTop.Parent = Selection
-  LeftTop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-  LeftTop.BackgroundTransparency = 1.000
-  LeftTop.Position = UDim2.new(0.0469999984, 0, 0.0399999991, 0)
-  LeftTop.Size = UDim2.new(0.426822633, 0, 0.0889659524, 0)
-  LeftTop.Image = "rbxgameasset://Images/ui_0000s_0000s_0001_Retângulo-3"
-  LeftTop.SliceCenter = Rect.new(5, 5, 759, 455)
+	  LeftTop.Name = "LeftTop"
+	  LeftTop.Parent = Selection
+	  LeftTop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	  LeftTop.BackgroundTransparency = 1.000
+	  LeftTop.Position = UDim2.new(0.0469999984, 0, 0.0399999991, 0)
+	  LeftTop.Size = UDim2.new(0.426822633, 0, 0.0889659524, 0)
+	  LeftTop.Image = "rbxgameasset://Images/ui_0000s_0000s_0001_Retângulo-3"
+	  LeftTop.SliceCenter = Rect.new(5, 5, 759, 455)
 
-  TextLabel.Parent = LeftTop
-  TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-  TextLabel.BackgroundTransparency = 1.000
-  TextLabel.Size = UDim2.new(0.989000022, 0, 0.850000024, 0)
-  TextLabel.Font = Enum.Font.GothamBlack
-  TextLabel.Text = "Main"
-  TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-  TextLabel.TextScaled = true
-  TextLabel.TextSize = 14.000
-  TextLabel.TextWrapped = true
+	  TextLabel.Parent = LeftTop
+	  TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	  TextLabel.BackgroundTransparency = 1.000
+	  TextLabel.Size = UDim2.new(0.989000022, 0, 0.850000024, 0)
+	  TextLabel.Font = Enum.Font.GothamBlack
+	  TextLabel.Text = "Main"
+	  TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	  TextLabel.TextScaled = true
+	  TextLabel.TextSize = 14.000
+	  TextLabel.TextWrapped = true
 
-  RightTop.Name = "RightTop"
-  RightTop.Parent = Selection
-  RightTop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-  RightTop.BackgroundTransparency = 1.000
-  RightTop.Position = UDim2.new(0.524999976, 0, 0.0399999991, 0)
-  RightTop.Size = UDim2.new(0.426822633, 0, 0.0889659524, 0)
-  RightTop.Image = "rbxgameasset://Images/ui_0000s_0000s_0001_Retângulo-3"
-  RightTop.SliceCenter = Rect.new(5, 5, 759, 455)
+	  RightTop.Name = "RightTop"
+	  RightTop.Parent = Selection
+	  RightTop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	  RightTop.BackgroundTransparency = 1.000
+	  RightTop.Position = UDim2.new(0.524999976, 0, 0.0399999991, 0)
+	  RightTop.Size = UDim2.new(0.426822633, 0, 0.0889659524, 0)
+	  RightTop.Image = "rbxgameasset://Images/ui_0000s_0000s_0001_Retângulo-3"
+	  RightTop.SliceCenter = Rect.new(5, 5, 759, 455)
 
-  TextLabel_2.Parent = RightTop
-  TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-  TextLabel_2.BackgroundTransparency = 1.000
-  TextLabel_2.Size = UDim2.new(0.989000022, 0, 0.850000024, 0)
-  TextLabel_2.Font = Enum.Font.GothamBlack
-  TextLabel_2.Text = "Configuration"
-  TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-  TextLabel_2.TextScaled = true
-  TextLabel_2.TextSize = 14.000
-  TextLabel_2.TextWrapped = true
+	  TextLabel_2.Parent = RightTop
+	  TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	  TextLabel_2.BackgroundTransparency = 1.000
+	  TextLabel_2.Size = UDim2.new(0.989000022, 0, 0.850000024, 0)
+	  TextLabel_2.Font = Enum.Font.GothamBlack
+	  TextLabel_2.Text = "Configuration"
+	  TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+	  TextLabel_2.TextScaled = true
+	  TextLabel_2.TextSize = 14.000
+	  TextLabel_2.TextWrapped = true
 
-  Drop.Name = "Drop"
-  Drop.Parent = Chat
-  Drop.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-  Drop.BackgroundTransparency = 0.350
-  Drop.Size = UDim2.new(2, 0, 2, 0)
+	  Drop.Name = "Drop"
+	  Drop.Parent = Chat
+	  Drop.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	  Drop.BackgroundTransparency = 0.350
+	  Drop.Size = UDim2.new(2, 0, 2, 0)
 
-  Credits.Name = "Credits"
-  Credits.Parent = Drop
-  Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-  Credits.BackgroundTransparency = 1.000
-  Credits.Position = UDim2.new(0, 0, 0.471178293, 0)
-  Credits.Size = UDim2.new(0.0817951038, 0, 0.0279390123, 0)
-  Credits.ZIndex = 999
-  Credits.Image = "rbxassetid://4934285542"
-  Credits.SliceCenter = Rect.new(4, 4, 252, 252)
-	return {
-    GUI = Chat;
-    Dropshadow = Drop;
-    Cheats = Cheats;
-    Tabs = TabsScroll;
-  }
+	  Credits.Name = "Credits"
+	  Credits.Parent = Drop
+	  Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	  Credits.BackgroundTransparency = 1.000
+	  Credits.Position = UDim2.new(0, 0, 0.471178293, 0)
+	  Credits.Size = UDim2.new(0.0817951038, 0, 0.0279390123, 0)
+	  Credits.ZIndex = 999
+	  Credits.Image = "rbxassetid://4934285542"
+	  Credits.SliceCenter = Rect.new(4, 4, 252, 252)
+	local Window = {}
+	setmetatable(Window, UILib)
+	Window.GUI = Chat;
+	Window.Dropshadow = Drop;
+	Window.Cheats = Cheats;
+	Window.CheatList = {};
+	Window.Tabs = TabsScroll;
+	Window.TabList = {};
+	Window.Enabled = true
 end
 
-function UILib.createTab(self, Name)
+function UILib.CreateTab(self, Name)
   local Legit = Instance.new("ImageButton")
   local TextLabel = Instance.new("TextLabel")
 
@@ -225,9 +228,11 @@ function UILib.createTab(self, Name)
   UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
   UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
   UIListLayout.Padding = UDim.new(0, -5)
+  table.insert(self.TabList, {Button = Legit, Frame = Tab})
+  return Legit,Tab
 end
 
-function UILib.createCheat(self, Name, Parent, CheatParent)
+function UILib.CreateCheat(self, Name, Parent, CheatParent)
 	local AimAssist = Instance.new("Frame")
 	local Input = Instance.new("ImageButton")
 	local Display = Instance.new("TextLabel")
@@ -292,10 +297,11 @@ function UILib.createCheat(self, Name, Parent, CheatParent)
 	Cheat.ChildAdded:Connect(function()
 		Cheat.CanvasSize = UDim2.new(0,UIListLayout.AbsoluteContentSize.X,0,UIListLayout.AbsoluteContentSize.Y)
 	end)
+	table.insert(self.CheatList, {Button = AimAssist, Frame = Cheat})
 	return AimAssist,Cheat
 end
 
-function UILib.createButton(self, Name, Parent)
+function UILib.CreateButton(self, Name, Parent)
 	local AimAssist = Instance.new("Frame")
 	local Input = Instance.new("ImageButton")
 	local Display = Instance.new("TextLabel")
@@ -332,10 +338,11 @@ function UILib.createButton(self, Name, Parent)
 	Display.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Display.TextSize = 9.000
 	Display.TextWrapped = true
-	Display.TextXAlignment = Enum.TextXAlignment.Left
+	Display.TextXAlignment = Enum.TextXAlignment.
+	return AimAssist
 end
 
-function UILib.createSlider(self, Name, Parent, Min, Max, Default)
+function UILib.CreateSlider(self, Name, Parent, Min, Max, Default)
 	local Speed = Instance.new("Frame")
 	local Display = Instance.new("TextLabel")
 	local Frame = Instance.new("Frame")
@@ -420,7 +427,7 @@ function UILib.createSlider(self, Name, Parent, Min, Max, Default)
 			down = false
 		end
 	end)
-	return Speed,Number
+	return Speed,Pointer,Number
 end
 
 return UILib
