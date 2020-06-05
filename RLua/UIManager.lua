@@ -202,7 +202,7 @@ function UILib.CreateTab(self, Name)
   Legit.BackgroundTransparency = 1.000
   Legit.BorderSizePixel = 0
   Legit.Position = UDim2.new(-1.76246687e-07, 0, 0, 0)
-  Legit.Size = UDim2.new(0.964999974, 0, 0.125, 0)
+  Legit.Size = UDim2.new(0.6, 0, 0.0625, 0)
   Legit.Image = toAsset(5032808078)
   Legit.ImageColor3 = Color3.fromRGB(155, 155, 155)
   Legit.ScaleType = Enum.ScaleType.Slice
