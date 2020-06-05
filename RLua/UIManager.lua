@@ -429,4 +429,4 @@ function UILib.CreateSlider(self, Name, Parent, Min, Max, Default)
 	return Speed,Pointer,Number
 end
 
-return function() return UILib end
+return UILib 
