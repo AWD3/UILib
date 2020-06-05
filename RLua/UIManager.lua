@@ -54,7 +54,7 @@ function UILib:CreateWindow()
 	  Main_2.BackgroundTransparency = 1.000
 	  Main_2.Position = UDim2.new(0.5, 0, 0.515789509, 0)
 	  Main_2.Size = UDim2.new(1, 0, 0.981578946, 0)
-	  Main_2.Image = "rbxgameasset://Images/ui_0000s_0000s_0006_Retângulo-Arredondado-2"
+	  Main_2.Image = "rbxassetid://5032463066"
 	  Main_2.ScaleType = Enum.ScaleType.Slice
 	  Main_2.SliceCenter = Rect.new(739, 462, 739, 462)
 
@@ -64,7 +64,7 @@ function UILib:CreateWindow()
 	  Tabs.BackgroundTransparency = 1.000
 	  Tabs.Position = UDim2.new(0.0334789716, 0, 0.0669437125, 0)
 	  Tabs.Size = UDim2.new(0.269341707, 0, 0.859525144, 0)
-	  Tabs.Image = "rbxgameasset://Images/ui_0000s_0000s_0005_Retângulo-Arredondado-3"
+	  Tabs.Image = "rbxassetid://5032462880"
 	  Tabs.ScaleType = Enum.ScaleType.Slice
 	  Tabs.SliceCenter = Rect.new(212, 400, 212, 400)
 
@@ -93,7 +93,7 @@ function UILib:CreateWindow()
 	  Selection.BackgroundTransparency = 1.000
 	  Selection.Position = UDim2.new(0.3336806, 0, 0.0669437125, 0)
 	  Selection.Size = UDim2.new(0.627274334, 0, 0.859525144, 0)
-	  Selection.Image = "rbxgameasset://Images/ui_0000s_0000s_0005_Retângulo-Arredondado-3"
+	  Selection.Image = "rbxassetid://5032462880"
 	  Selection.ScaleType = Enum.ScaleType.Slice
 	  Selection.SliceCenter = Rect.new(212, 400, 212, 400)
 
@@ -103,7 +103,7 @@ function UILib:CreateWindow()
 	  Cheats.BackgroundTransparency = 1.000
 	  Cheats.Position = UDim2.new(0.0466742516, 0, 0.156038105, 0)
 	  Cheats.Size = UDim2.new(0.426822633, 0, 0.764568031, 0)
-	  Cheats.Image = "rbxgameasset://Images/ui_0000s_0000s_0002_Retângulo-2"
+	  Cheats.Image = "rbxassetid://5032462618"
 	  Cheats.SliceCenter = Rect.new(5, 5, 759, 455)
 
 	  RightMenu.Name = "RightMenu"
@@ -112,7 +112,7 @@ function UILib:CreateWindow()
 	  RightMenu.BackgroundTransparency = 1.000
 	  RightMenu.Position = UDim2.new(0.525255144, 0, 0.156038105, 0)
 	  RightMenu.Size = UDim2.new(0.426822633, 0, 0.764568031, 0)
-	  RightMenu.Image = "rbxgameasset://Images/ui_0000s_0000s_0002_Retângulo-2"
+	  RightMenu.Image = "rbxassetid://5032462618"
 	  RightMenu.SliceCenter = Rect.new(5, 5, 759, 455)
 
 	  LeftTop.Name = "LeftTop"
@@ -121,7 +121,7 @@ function UILib:CreateWindow()
 	  LeftTop.BackgroundTransparency = 1.000
 	  LeftTop.Position = UDim2.new(0.0469999984, 0, 0.0399999991, 0)
 	  LeftTop.Size = UDim2.new(0.426822633, 0, 0.0889659524, 0)
-	  LeftTop.Image = "rbxgameasset://Images/ui_0000s_0000s_0001_Retângulo-3"
+	  LeftTop.Image = "rbxassetid://5032462490"
 	  LeftTop.SliceCenter = Rect.new(5, 5, 759, 455)
 
 	  TextLabel.Parent = LeftTop
@@ -141,7 +141,7 @@ function UILib:CreateWindow()
 	  RightTop.BackgroundTransparency = 1.000
 	  RightTop.Position = UDim2.new(0.524999976, 0, 0.0399999991, 0)
 	  RightTop.Size = UDim2.new(0.426822633, 0, 0.0889659524, 0)
-	  RightTop.Image = "rbxgameasset://Images/ui_0000s_0000s_0001_Retângulo-3"
+	  RightTop.Image = "rbxassetid://5032462490"
 	  RightTop.SliceCenter = Rect.new(5, 5, 759, 455)
 
 	  TextLabel_2.Parent = RightTop
@@ -193,7 +193,7 @@ function UILib.CreateTab(self, Name)
   Legit.BorderSizePixel = 0
   Legit.Position = UDim2.new(-1.76246687e-07, 0, 0, 0)
   Legit.Size = UDim2.new(0.964999974, 0, 0.125, 0)
-  Legit.Image = "rbxgameasset://Images/ui.psd_0000s_0000_Retângulo-Arredondado-5"
+  Legit.Image = "rbxassetid://5032808078"
   Legit.ImageColor3 = Color3.fromRGB(155, 155, 155)
   Legit.ScaleType = Enum.ScaleType.Slice
   Legit.SliceCenter = Rect.new(156, 11, 156, 11)
