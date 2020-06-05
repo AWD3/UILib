@@ -1,6 +1,9 @@
 # UILib
 This is the UI Lib for WatchDogs v1
-Use safely :D
+```
+https://raw.githubusercontent.com/AWD3/UILib/master/RLua/UIManager.lua
+```
+Follow the Documentation for the UI Manager.
 
 # Documentation
 
