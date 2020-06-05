@@ -1,5 +1,4 @@
 local UILib = {}
-UILib.__index = UILib
 
 local UserInputService = game:GetService("UserInputService")
 local Players = game:GetService("Players")
