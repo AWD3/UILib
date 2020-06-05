@@ -202,7 +202,7 @@ function UILib.CreateTab(self, Name)
   Legit.BackgroundTransparency = 1.000
   Legit.BorderSizePixel = 0
   Legit.Position = UDim2.new(-1.76246687e-07, 0, 0, 0)
-  Legit.Size = UDim2.new(0.6, 0, 0.0625, 0)
+  Legit.Size = UDim2.new(0.964999974, 0, 0.125, 0)
   Legit.Image = toAsset(5032808078)
   Legit.ImageColor3 = Color3.fromRGB(155, 155, 155)
   Legit.ScaleType = Enum.ScaleType.Slice
@@ -265,7 +265,7 @@ function UILib.CreateCheat(self, Name, Parent, CheatParent, Callback)
 	Input.BorderColor3 = Color3.fromRGB(39, 24, 68)
 	Input.BorderSizePixel = 2
 	Input.Position = UDim2.new(0.147, 0, 0.5, 0)
-	Input.Size = UDim2.new(0.158297956, 0, 0.519294918, 0)
+	Input.Size = UDim2.new(0.058297956, 0, 0.25, 0)
 	Input.AutoButtonColor = false
 	Input.Image = toAsset(5035990161)
 	
@@ -334,22 +334,22 @@ function UILib.CreateButton(self, Name, Parent, Callback)
 	
 	Input.Name = "Input"
 	Input.Parent = AimAssist
-	Input.AnchorPoint = Vector2.new(0.5, 0.5)
+	Input.AnchorPoint = Vector2.new(0, 1)
 	Input.BackgroundColor3 = Color3.fromRGB(33, 20, 52)
 	Input.BorderColor3 = Color3.fromRGB(39, 24, 68)
 	Input.BorderSizePixel = 2
-	Input.Position = UDim2.new(0.147, 0, 0.5, 0)
-	Input.Size = UDim2.new(0.158297956, 0, 0.519294918, 0)
+	Input.Position = UDim2.new(0.15, 0, 0.5, 0)
+	Input.Size = UDim2.new(0.058297956, 0, 0.25, 0)
 	Input.AutoButtonColor = false
 	Input.Image = toAsset(5035990161)
 	
 	Display.Name = "Display"
 	Display.Parent = AimAssist
-	Display.AnchorPoint = Vector2.new(0, 0.5)
+	Display.AnchorPoint = Vector2.new(0.5, 1)
 	Display.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Display.BackgroundTransparency = 1.000
-	Display.Position = UDim2.new(0.299999982, 0, 0.5, 0)
-	Display.Size = UDim2.new(0.600000024, 0, 0.5, 0)
+	Display.Position = UDim2.new(0.5, 0, 0.5, 0)
+	Display.Size = UDim2.new(0.600000024, 0, 0.25, 0)
 	Display.Font = Enum.Font.Gotham
 	Display.Text = Name
 	Display.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -408,7 +408,8 @@ function UILib.CreateSlider(self, Name, Parent, Min, Max, Default, Callback)
 	Pointer.Parent = Slider
 	Pointer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Pointer.BorderSizePixel = 0
-	Pointer.Size = UDim2.new(0.100000001, 0, 1, 0)
+	Pointer.AnchorPoint = Vector2.new(-.5,0)
+	Pointer.Size = UDim2.new(0.1, 0, 1, 0)
 	
 	Number.Name = "Number"
 	Number.Parent = Slider
@@ -418,7 +419,7 @@ function UILib.CreateSlider(self, Name, Parent, Min, Max, Default, Callback)
 	Number.ZIndex = 2
 	Number.Font = Enum.Font.Gotham
 	Number.Text = Default or "0"
-	Number.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Number.TextColor3 = Color3.fromRGB(255, 0, 255)
 	Number.TextSize = 9.000
 	
 	local down
@@ -427,17 +428,25 @@ function UILib.CreateSlider(self, Name, Parent, Min, Max, Default, Callback)
 			down = true
 		end
 	end)
+	Pointer.Position = UDim2.new(
+		UDim.new(
+			0,
+			math.clamp(Default, Min, Max)
+		), 
+		Pointer.Position.Y
+	)
+	Number.Text = Pointer.Position.X.Offset
 	
 	Mouse.Move:Connect(function()
 		if down then
 			Pointer.Position = UDim2.new(
 				UDim.new(
 					0,
-					math.clamp(Mouse.X-Slider.AbsolutePosition.X, Slider.AbsoluteSize.X,0)
+					math.clamp(Mouse.X-Slider.AbsolutePosition.X, Min, Max)
 				), 
 				Pointer.Position.Y
 			)
-			Number.Text = Max*Pointer.Position.X.Offset
+			Number.Text = Pointer.Position.X.Offset
 		end
 	end)
 	UserInputService.InputEnded:Connect(function(inp)
