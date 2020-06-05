@@ -228,7 +228,7 @@ function UILib.CreateTab(self, Name)
   UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
   UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
   UIListLayout.Padding = UDim.new(0, -5)
-  table.insert(self.TabList, {Button = Legit, Frame = Tab})
+  self.Tablist[Name] = {Button = Legit, Frame = Tab}
   return Legit,Tab
 end
 
@@ -238,7 +238,7 @@ function UILib.CreateCheat(self, Name, Parent, CheatParent)
 	local Display = Instance.new("TextLabel")
 	
 	AimAssist.Name = Name
-	AimAssist.Parent = game.StarterGui.Chat.Main.Main.Selection.Cheats.Legit
+	AimAssist.Parent = Parent
 	AimAssist.AnchorPoint = Vector2.new(0.5, 0.5)
 	AimAssist.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	AimAssist.BackgroundTransparency = 1.000
@@ -301,7 +301,7 @@ function UILib.CreateCheat(self, Name, Parent, CheatParent)
 	return AimAssist,Cheat
 end
 
-function UILib.CreateButton(self, Name, Parent)
+function UILib.CreateButton(self, Name, Parent, Callback)
 	local AimAssist = Instance.new("Frame")
 	local Input = Instance.new("ImageButton")
 	local Display = Instance.new("TextLabel")
@@ -339,10 +339,11 @@ function UILib.CreateButton(self, Name, Parent)
 	Display.TextSize = 9.000
 	Display.TextWrapped = true
 	Display.TextXAlignment = Enum.TextXAlignment.Center
+	Input.MouseButton1Click:Connect(Callback)
 	return AimAssist
 end
 
-function UILib.CreateSlider(self, Name, Parent, Min, Max, Default)
+function UILib.CreateSlider(self, Name, Parent, Min, Max, Default, Callback)
 	local Speed = Instance.new("Frame")
 	local Display = Instance.new("TextLabel")
 	local Frame = Instance.new("Frame")
@@ -425,6 +426,7 @@ function UILib.CreateSlider(self, Name, Parent, Min, Max, Default)
 	UserInputService.InputEnded:Connect(function(inp)
 		if inp.UserInputType == Enum.UserInputType.MouseButton1 then
 			down = false
+			Callback(Number.Text)
 		end
 	end)
 	return Speed,Pointer,Number
