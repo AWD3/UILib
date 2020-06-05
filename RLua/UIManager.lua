@@ -179,6 +179,7 @@ function UILib:CreateWindow()
 	Window.Tabs = TabsScroll;
 	Window.TabList = {};
 	Window.Enabled = true
+	return Window
 end
 
 function UILib.CreateTab(self, Name)
