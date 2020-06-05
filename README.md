@@ -14,15 +14,27 @@ returns {GUI, Dropshadow, Cheats, Tabs}
 ```
 Window:CreateTab(<string> : Name)
 ```
-Creates a cool tab button for the window you have created.
+Creates a tab button.
 
 returns Tab Button
 
 ```
-Window:CreateCheat(<string> : Name, <Instance> : Parent, <Instance> : CheatParent)
+Window:CreateCheat(<string> : Name, <Instance> : Parent, <Instance> : FrameParent, <Function> Callback)
 ```
-Creates the cheat button that automatically changes tabs when you click!! hooray!!
+Creates a tab button, define what it does using the callback argument or using the first return argument.
 
 returns Cheat Button, Cheat Frame
 
+```
+Window:CreateButton(<string> : Name, <Instance> : Parent, <Function> Callback)
+```
+Creates a button, define what it does using the callback argument or using the first return argument.
 
+returns Cheat Button
+
+```
+Window:CreateSlider(<string> : Name, <Instance> : Parent, <Number> Minimum, <Number> Maximum, <Number> Default, <Function> Callback)
+```
+Creates a slider, define what it does using the callback argument.
+
+returns Main Frame, Pointer, Current Value Label
