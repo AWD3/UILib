@@ -1,9 +1,16 @@
 local UILib = {}
+UILib.__index = UILib
 
 local UserInputService = game:GetService("UserInputService")
+local MarketPlaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
+
+function toAsset(id)
+	local Asset = MarketPlaceService:GetProductInfo(id, Enum.InfoType.Asset)
+	return "https://www.roblox.com/asset-thumbnail/image?assetId="..Asset.AssetId.."&width=420&height=420&format=png"
+end
 
 function UILib:CreateWindow()
 	  local Chat = Instance.new("ScreenGui")
@@ -44,8 +51,8 @@ function UILib:CreateWindow()
 	  Top.BackgroundTransparency = 1.000
 	  Top.Position = UDim2.new(0.5, 0, 0.0579999983, 0)
 	  Top.Size = UDim2.new(1, 0, 0.0970000029, 0)
-	  Top.Image = "rbxassetid://5032463163"
-	  Top.SliceCenter = Rect.new(5, 5, 759, 455)
+	  Top.Image = toAsset(5032463163)
+	  Top.SliceCenter = Rect.new(210, 210, 210, 210)
 
 	  Main_2.Name = "Main"
 	  Main_2.Parent = Main
@@ -54,9 +61,9 @@ function UILib:CreateWindow()
 	  Main_2.BackgroundTransparency = 1.000
 	  Main_2.Position = UDim2.new(0.5, 0, 0.515789509, 0)
 	  Main_2.Size = UDim2.new(1, 0, 0.981578946, 0)
-	  Main_2.Image = "rbxassetid://5032463066"
+	  Main_2.Image = toAsset(5032463066)
 	  Main_2.ScaleType = Enum.ScaleType.Slice
-	  Main_2.SliceCenter = Rect.new(739, 462, 739, 462)
+	  Main_2.SliceCenter = Rect.new(210, 210, 210, 210)
 
 	  Tabs.Name = "Tabs"
 	  Tabs.Parent = Main_2
@@ -64,9 +71,9 @@ function UILib:CreateWindow()
 	  Tabs.BackgroundTransparency = 1.000
 	  Tabs.Position = UDim2.new(0.0334789716, 0, 0.0669437125, 0)
 	  Tabs.Size = UDim2.new(0.269341707, 0, 0.859525144, 0)
-	  Tabs.Image = "rbxassetid://5032462880"
+	  Tabs.Image = toAsset(5032462880)
 	  Tabs.ScaleType = Enum.ScaleType.Slice
-	  Tabs.SliceCenter = Rect.new(212, 400, 212, 400)
+	  Tabs.SliceCenter = Rect.new(210, 210, 210, 210)
 
 	  TabsScroll.Name = "TabsScroll"
 	  TabsScroll.Parent = Tabs
@@ -93,9 +100,9 @@ function UILib:CreateWindow()
 	  Selection.BackgroundTransparency = 1.000
 	  Selection.Position = UDim2.new(0.3336806, 0, 0.0669437125, 0)
 	  Selection.Size = UDim2.new(0.627274334, 0, 0.859525144, 0)
-	  Selection.Image = "rbxassetid://5032462880"
+	  Selection.Image = toAsset(5032462880)
 	  Selection.ScaleType = Enum.ScaleType.Slice
-	  Selection.SliceCenter = Rect.new(212, 400, 212, 400)
+	  Selection.SliceCenter = Rect.new(210, 210, 210, 210)
 
 	  Cheats.Name = "Cheats"
 	  Cheats.Parent = Selection
@@ -103,8 +110,8 @@ function UILib:CreateWindow()
 	  Cheats.BackgroundTransparency = 1.000
 	  Cheats.Position = UDim2.new(0.0466742516, 0, 0.156038105, 0)
 	  Cheats.Size = UDim2.new(0.426822633, 0, 0.764568031, 0)
-	  Cheats.Image = "rbxassetid://5032462618"
-	  Cheats.SliceCenter = Rect.new(5, 5, 759, 455)
+	  Cheats.Image = toAsset(5032462618)
+	  Cheats.SliceCenter = Rect.new(210, 210, 210, 210)
 
 	  RightMenu.Name = "RightMenu"
 	  RightMenu.Parent = Selection
@@ -112,8 +119,8 @@ function UILib:CreateWindow()
 	  RightMenu.BackgroundTransparency = 1.000
 	  RightMenu.Position = UDim2.new(0.525255144, 0, 0.156038105, 0)
 	  RightMenu.Size = UDim2.new(0.426822633, 0, 0.764568031, 0)
-	  RightMenu.Image = "rbxassetid://5032462618"
-	  RightMenu.SliceCenter = Rect.new(5, 5, 759, 455)
+	  RightMenu.Image = toAsset(5032462618)
+	  RightMenu.SliceCenter = Rect.new(210, 210, 210, 210)
 
 	  LeftTop.Name = "LeftTop"
 	  LeftTop.Parent = Selection
@@ -121,8 +128,8 @@ function UILib:CreateWindow()
 	  LeftTop.BackgroundTransparency = 1.000
 	  LeftTop.Position = UDim2.new(0.0469999984, 0, 0.0399999991, 0)
 	  LeftTop.Size = UDim2.new(0.426822633, 0, 0.0889659524, 0)
-	  LeftTop.Image = "rbxassetid://5032462490"
-	  LeftTop.SliceCenter = Rect.new(5, 5, 759, 455)
+	  LeftTop.Image = toAsset(5032462490)
+	  LeftTop.SliceCenter = Rect.new(210, 210, 210, 210)
 
 	  TextLabel.Parent = LeftTop
 	  TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -141,8 +148,8 @@ function UILib:CreateWindow()
 	  RightTop.BackgroundTransparency = 1.000
 	  RightTop.Position = UDim2.new(0.524999976, 0, 0.0399999991, 0)
 	  RightTop.Size = UDim2.new(0.426822633, 0, 0.0889659524, 0)
-	  RightTop.Image = "rbxassetid://5032462490"
-	  RightTop.SliceCenter = Rect.new(5, 5, 759, 455)
+	  RightTop.Image = toAsset(5032462490)
+	  RightTop.SliceCenter = Rect.new(210, 210, 210, 210)
 
 	  TextLabel_2.Parent = RightTop
 	  TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -160,16 +167,17 @@ function UILib:CreateWindow()
 	  Drop.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	  Drop.BackgroundTransparency = 0.350
 	  Drop.Size = UDim2.new(2, 0, 2, 0)
+	  Drop.AnchorPoint = Vector2.new(0,.5)
 
 	  Credits.Name = "Credits"
 	  Credits.Parent = Drop
 	  Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	  Credits.BackgroundTransparency = 1.000
-	  Credits.Position = UDim2.new(0, 0, 0.471178293, 0)
+	  Credits.Position = UDim2.new(0, 0, 1, 0)
 	  Credits.Size = UDim2.new(0.0817951038, 0, 0.0279390123, 0)
 	  Credits.ZIndex = 999
-	  Credits.Image = "rbxassetid://4934285542"
-	  Credits.SliceCenter = Rect.new(4, 4, 252, 252)
+	  Credits.Image = toAsset(4934285542)
+	  Credits.SliceCenter = Rect.new(210, 210, 210, 210)
 	local Window = {}
 	setmetatable(Window, UILib)
 	Window.GUI = Chat;
@@ -186,7 +194,7 @@ function UILib.CreateTab(self, Name)
   local Legit = Instance.new("ImageButton")
   local TextLabel = Instance.new("TextLabel")
 
-  Legit.Name = "Legit"
+  Legit.Name = Name
   Legit.Parent = self.Tabs
   Legit.AnchorPoint = Vector2.new(0.5, 0.5)
   Legit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -194,7 +202,7 @@ function UILib.CreateTab(self, Name)
   Legit.BorderSizePixel = 0
   Legit.Position = UDim2.new(-1.76246687e-07, 0, 0, 0)
   Legit.Size = UDim2.new(0.964999974, 0, 0.125, 0)
-  Legit.Image = "rbxassetid://5032808078"
+  Legit.Image = toAsset(5032808078)
   Legit.ImageColor3 = Color3.fromRGB(155, 155, 155)
   Legit.ScaleType = Enum.ScaleType.Slice
   Legit.SliceCenter = Rect.new(156, 11, 156, 11)
@@ -204,14 +212,14 @@ function UILib.CreateTab(self, Name)
   TextLabel.BackgroundTransparency = 1.000
   TextLabel.Size = UDim2.new(1, 0, 1, 0)
   TextLabel.Font = Enum.Font.GothamBlack
-  TextLabel.Text = "Legit"
+  TextLabel.Text = Name
   TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
   TextLabel.TextSize = 16.000
   TextLabel.TextWrapped = true
   local Tab = Instance.new("ScrollingFrame")
   local UIListLayout = Instance.new("UIListLayout")
 
-  Tab.Name = "Legit"
+  Tab.Name = Name
   Tab.Parent = self.Cheats
   Tab.Active = true
   Tab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -228,6 +236,9 @@ function UILib.CreateTab(self, Name)
   UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
   UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
   UIListLayout.Padding = UDim.new(0, -5)
+	if not self.Tablist then
+		self.Tablist = {}
+	end
   self.Tablist[Name] = {Button = Legit, Frame = Tab}
   return Legit,Tab
 end
@@ -255,7 +266,7 @@ function UILib.CreateCheat(self, Name, Parent, CheatParent)
 	Input.Position = UDim2.new(0.147, 0, 0.5, 0)
 	Input.Size = UDim2.new(0.158297956, 0, 0.519294918, 0)
 	Input.AutoButtonColor = false
-	Input.Image = "rbxassetid://5035990161"
+	Input.Image = toAsset(5035990161)
 	
 	Display.Name = "Display"
 	Display.Parent = AimAssist
@@ -324,7 +335,7 @@ function UILib.CreateButton(self, Name, Parent, Callback)
 	Input.Position = UDim2.new(0.147, 0, 0.5, 0)
 	Input.Size = UDim2.new(0.158297956, 0, 0.519294918, 0)
 	Input.AutoButtonColor = false
-	Input.Image = "rbxassetid://5035990161"
+	Input.Image = toAsset(5035990161)
 	
 	Display.Name = "Display"
 	Display.Parent = AimAssist
