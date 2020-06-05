@@ -337,7 +337,7 @@ function UILib.CreateButton(self, Name, Parent)
 	Display.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Display.TextSize = 9.000
 	Display.TextWrapped = true
-	Display.TextXAlignment = Enum.TextXAlignment.
+	Display.TextXAlignment = Enum.TextXAlignment.Center
 	return AimAssist
 end
 
@@ -429,4 +429,4 @@ function UILib.CreateSlider(self, Name, Parent, Min, Max, Default)
 	return Speed,Pointer,Number
 end
 
-return UILib 
+return UILib
