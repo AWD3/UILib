@@ -1,7 +1,7 @@
 # UILib
 This is the UI Lib for WatchDogs v1
 ```
-https://raw.githubusercontent.com/AWD3/UILib/master/RLua/UIManager.lua
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AWD3/UILib/master/RLua/UIManager.lua", true))()
 ```
 Follow the Documentation for the UI Manager.
 
