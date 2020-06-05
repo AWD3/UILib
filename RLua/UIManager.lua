@@ -233,7 +233,7 @@ function UILib.CreateTab(self, Name)
   Tab.ScrollBarThickness = 0
   Tab.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
 
-  UIListLayout.Parent = Legit
+  UIListLayout.Parent = Tab
   UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
   UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
   UIListLayout.Padding = UDim.new(0, -5)
