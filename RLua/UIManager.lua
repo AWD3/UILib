@@ -182,7 +182,7 @@ function UILib:CreateWindow()
 	setmetatable(Window, UILib)
 	Window.GUI = Chat;
 	Window.Dropshadow = Drop;
-	Window.Cheats = Cheats;
+	Window.Cheats = RightMenu;
 	Window.CheatList = {};
 	Window.Tabs = TabsScroll;
 	Window.TabList = {};
@@ -205,7 +205,7 @@ function UILib.CreateTab(self, Name)
   Legit.Image = toAsset(5032808078)
   Legit.ImageColor3 = Color3.fromRGB(155, 155, 155)
   Legit.ScaleType = Enum.ScaleType.Slice
-  Legit.SliceCenter = Rect.new(156, 11, 156, 11)
+  Legit.SliceCenter = Rect.new(210, 210, 210, 210)
 
   TextLabel.Parent = Legit
   TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -243,7 +243,7 @@ function UILib.CreateTab(self, Name)
   return Legit,Tab
 end
 
-function UILib.CreateCheat(self, Name, Parent, CheatParent)
+function UILib.CreateCheat(self, Name, Parent, CheatParent, Callback)
 	local AimAssist = Instance.new("Frame")
 	local Input = Instance.new("ImageButton")
 	local Display = Instance.new("TextLabel")
@@ -308,6 +308,11 @@ function UILib.CreateCheat(self, Name, Parent, CheatParent)
 	Cheat.ChildAdded:Connect(function()
 		Cheat.CanvasSize = UDim2.new(0,UIListLayout.AbsoluteContentSize.X,0,UIListLayout.AbsoluteContentSize.Y)
 	end)
+	if Callback then
+		Input.MouseButton1Click:Connect(function()
+			Callback(Cheat)
+		end)
+	end
 	table.insert(self.CheatList, {Button = AimAssist, Frame = Cheat})
 	return AimAssist,Cheat
 end
