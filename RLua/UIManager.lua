@@ -182,7 +182,8 @@ function UILib:CreateWindow()
 	setmetatable(Window, UILib)
 	Window.GUI = Chat;
 	Window.Dropshadow = Drop;
-	Window.Cheats = RightMenu;
+	Window.Cheats = Cheats;
+	Window.RMenu = RightMenu
 	Window.CheatList = {};
 	Window.Tabs = TabsScroll;
 	Window.TabList = {};
