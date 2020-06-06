@@ -449,6 +449,7 @@ function UILib.CreateSlider(self, Name, Parent, Min, Max, Default, Callback)
 				), 
 				Pointer.Position.Y
 			)})
+			T:Play()
 			Number.Text = ((Pointer.Position.X.Offset/100)*Max)
 		end
 	end)
