@@ -435,7 +435,7 @@ function UILib.CreateSlider(self, Name, Parent, Min, Max, Default, Callback)
 		), 
 		Pointer.Position.Y
 	)
-	Number.Text = Pointer.Position.X.Offset*Max
+	Number.Text = (Pointer.Position.X.Offset/1000)*Max
 	
 	Mouse.Move:Connect(function()
 		if down then
@@ -446,7 +446,7 @@ function UILib.CreateSlider(self, Name, Parent, Min, Max, Default, Callback)
 				), 
 				Pointer.Position.Y
 			)
-			Number.Text = Pointer.Position.X.Offset*Max
+			Number.Text = (Pointer.Position.X.Offset/1000)*Max
 		end
 	end)
 	UserInputService.InputEnded:Connect(function(inp)
