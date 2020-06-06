@@ -3,6 +3,7 @@ UILib.__index = UILib
 
 local UserInputService = game:GetService("UserInputService")
 local MarketPlaceService = game:GetService("MarketplaceService")
+local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
@@ -428,6 +429,7 @@ function UILib.CreateSlider(self, Name, Parent, Min, Max, Default, Callback)
 			down = true
 		end
 	end)
+	local TI = TweenInfo.new(.5)
 	Pointer.Position = UDim2.new(
 		UDim.new(
 			0,
@@ -439,13 +441,14 @@ function UILib.CreateSlider(self, Name, Parent, Min, Max, Default, Callback)
 	
 	Mouse.Move:Connect(function()
 		if down then
-			Pointer.Position = UDim2.new(
+			local T = TweenService:Create(Pointer, TI, {
+			Position = UDim2.new(
 				UDim.new(
 					0,
 					math.clamp(Mouse.X-Slider.AbsolutePosition.X, 0, 100)
 				), 
 				Pointer.Position.Y
-			)
+			)})
 			Number.Text = ((Pointer.Position.X.Offset/100)*Max)
 		end
 	end)
