@@ -49,7 +49,7 @@ function UILib:CreateWindow()
 	  Top.AnchorPoint = Vector2.new(0.5, 0.5)
 	  Top.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	  Top.BackgroundTransparency = 1.000
-	  Top.Position = UDim2.new(0.5, 0, 0.0579999983, 0)
+	  Top.Position = UDim2.new(0.5, 0, 0.025, 0)
 	  Top.Size = UDim2.new(1, 0, 0.0970000029, 0)
 	  Top.Image = toAsset(5032463163)
 	  Top.SliceCenter = Rect.new(210, 210, 210, 210)
