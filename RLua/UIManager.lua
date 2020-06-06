@@ -431,28 +431,28 @@ function UILib.CreateSlider(self, Name, Parent, Min, Max, Default, Callback)
 	Pointer.Position = UDim2.new(
 		UDim.new(
 			0,
-			math.clamp(Default, Min, Max)
+			math.clamp(Default, 0, Slider.AbsoluteSize.X)
 		), 
 		Pointer.Position.Y
 	)
-	Number.Text = Pointer.Position.X.Offset
+	Number.Text = Pointer.Position.X.Offset*Max
 	
 	Mouse.Move:Connect(function()
 		if down then
 			Pointer.Position = UDim2.new(
 				UDim.new(
 					0,
-					math.clamp(Mouse.X-Slider.AbsolutePosition.X, Min, Max)
+					math.clamp(Mouse.X-Slider.AbsolutePosition.X, 0, Slider.AbsoluteSize.X)
 				), 
 				Pointer.Position.Y
 			)
-			Number.Text = Pointer.Position.X.Offset
+			Number.Text = Pointer.Position.X.Offset*Max
 		end
 	end)
 	UserInputService.InputEnded:Connect(function(inp)
 		if inp.UserInputType == Enum.UserInputType.MouseButton1 then
 			down = false
-			Callback(Number.Text)
+			Callback(tonumber(Number.Text))
 		end
 	end)
 	return Speed,Pointer,Number
